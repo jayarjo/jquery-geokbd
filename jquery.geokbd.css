@@ -1,0 +1,81 @@
+.gk-switcher {
+	position: relative;
+	display: inline; /* for ancient IEs */
+	zoom: 1;
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 19px;
+	-webkit-perspective: 50px;
+	-moz-perspective: 50px;
+	-moz-perspective-origin: 50% 50%;
+	-webkit-perspective-origin: 50% 50%;
+}
+
+.gk-ka,
+.gk-us {
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	transition: all 300ms ease;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform-origin: 100% 0%;
+	-moz-transform-origin: 100% 0%;
+	transform-origin: 100% 0%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	background: url(flags.png) no-repeat;
+	cursor: pointer;
+}
+
+.gk-ka {
+	-webkit-transform-origin: 0% 100%;
+	-moz-transform-origin: 0% 100%;
+	transform-origin: 0% 100%;
+	-webkit-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	-moz-transform: translate3d(100%, 0, 0) rotateY(90deg);
+	transform: translate3d(100%, 0, 0) rotateY(90deg);
+	background-position: 0 -19px;
+	z-index: 0;
+}
+
+.gk-us {
+	background-position: 0 0;
+	z-index: 1;
+}
+
+.gk-on .gk-us {
+	-webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	-moz-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+	z-index: 0;
+}
+
+.gk-on .gk-ka {
+	-webkit-transform: none;
+	-moz-transform: none;
+	transform: none;
+	z-index: 1;
+}
+
+.gk-ka,
+.gk-us,
+.gk-switcher input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.gk-switcher input {
+	padding: 0;
+	margin: 0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;	
+	z-index: 2;
+}
