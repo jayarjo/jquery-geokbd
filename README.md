@@ -32,6 +32,10 @@ It is possible to switch the plugin for specific forms, or even input elements (
 </script>
 ```
 
+## Credits
+Plugin is inspired and partially based on Ioseb Dzmanashvili's GeoKBD (https://github.com/ioseb/geokbd)
+
+
 ## License
 Copyright (c) 2012 Davit Barbakadze  
 Licensed under the MIT license.
