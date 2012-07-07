@@ -1,9 +1,9 @@
 # jquery-geokbd
 
-Type in Georgian without having Georgian keyboard installed in the system
+Type Georgian letters without having Georgian keyboard installed in the system
 
 ## Getting Started
-First of all this is jQuery plugin, which means that you must include jQuery first, then the plugin file:
+First of all this is jQuery plugin, which means that you have to include jQuery first, then the plugin:
 
 ```html
 <!doctype>
@@ -22,7 +22,15 @@ First of all this is jQuery plugin, which means that you must include jQuery fir
 	...
 ```
 
+It is possible to switch the plugin for specific forms, or even input elements (input[type="text"] and textarea) only, but right now plugin operates only in the simplest mode, thus activates georgian keyboard on all input elements that exist on the page.
 
+```html
+<input id="kbd-switcher" type="checkbox" />
+
+<script>
+	jQuery('#kbd-switcher').geokbd();
+</script>
+```
 
 ## License
 Copyright (c) 2012 Davit Barbakadze  
