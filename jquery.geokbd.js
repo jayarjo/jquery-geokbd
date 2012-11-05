@@ -76,7 +76,7 @@ $.fn.geokbd = function(options) {
 
 		if (ch != kach) {
 			if ($.browser.msie) {
-				window.event.keyCode = kaText.charCodeAt(0);
+				window.event.keyCode = kach.charCodeAt(0);
 			} else {
 				pasteTo.call(kach, e.target);
 				e.preventDefault();
