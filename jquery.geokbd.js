@@ -75,7 +75,7 @@ $.fn.geokbd = function(options) {
 		kach = translateToKa.call(ch);
 
 		if (ch != kach) {
-			if ($.browser.msie) {
+			if (navigator.appName.indexOf("Internet Explorer")!=-1) {
 				window.event.keyCode = kach.charCodeAt(0);
 			} else {
 				pasteTo.call(kach, e.target);
