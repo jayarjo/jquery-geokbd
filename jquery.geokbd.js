@@ -125,7 +125,8 @@ $.fn.geokbd = function(options) {
 			var value = field.value.substr(0, start) + this + field.value.substr(end, field.value.length);
 			field.value = value;
 			field.scrollTop = scroll;
-			field.setSelectionRange(start + this.length, start + this.length); 
+			field.setSelectionRange(start + this.length, start + this.length);
+			$(field).trigger('input');
 		} else {
 			field.value += this;
 			field.setSelectionRange(field.value.length, field.value.length);    
